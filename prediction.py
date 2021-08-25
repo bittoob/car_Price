@@ -3,7 +3,7 @@ import numpy as np
 import sklearn
 import pickle
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_model(file):
     model = pickle.load(open(file,"rb"))
     return model
